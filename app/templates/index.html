@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PredictAI — Universal Prediction & Risk Intelligence</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="boot">
+  <div class="boot-orb"></div>
+  <div class="boot-title">PREDICT<span>AI</span></div>
+  <div class="boot-line"><i></i></div>
+  <div class="boot-status" id="bootStatus">INITIALIZING INTELLIGENCE CORE...</div>
+</div>
+
+<div class="shell">
+<header class="topbar">
+  <div class="brand"><div class="brand-mark">P</div><div><b>PredictAI</b><small>UNIVERSAL PREDICTION ENGINE</small></div></div>
+  <div class="status"><span class="dot"></span> LOCAL ML CORE <span class="sep">•</span> GEMINI READY</div>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <div class="eyebrow">DATA → MODEL → DECISION</div>
+    <h1>Predict the outcome.<br><em>Understand the why.</em></h1>
+    <p>One local intelligence workspace for prediction, risk scoring and AI-assisted interpretation.</p>
+  </div>
+  <div class="hero-card">
+    <div class="scan"></div>
+    <div class="mini-label">ENGINE STATUS</div>
+    <strong>ONLINE</strong>
+    <div class="tiny">4 prediction modules • local inference</div>
+  </div>
+</section>
+
+<section class="modules">
+  <div class="section-head"><div><span>01</span> SELECT A PREDICTION ENGINE</div><small>Choose a model to begin</small></div>
+  <div class="grid">
+  {% for key,m in modules.items() %}
+    <button class="module" data-module="{{key}}">
+      <div class="module-icon">{{m.icon}}</div>
+      <div><div class="module-title">{{m.title}}</div><p>{{m.description}}</p></div>
+      <div class="arrow">↗</div>
+    </button>
+  {% endfor %}
+  </div>
+</section>
+
+<section id="workspace" class="workspace hidden">
+  <div class="section-head"><div><span>02</span> LIVE MODEL INPUT</div><small id="workspaceSub">Enter the variables</small></div>
+  <div class="workspace-grid">
+    <form id="predictionForm"></form>
+    <aside class="side-panel">
+      <div class="model-badge">● MODEL READY</div>
+      <h3 id="modelName">Prediction Engine</h3>
+      <p id="modelHint">Your inputs stay local for ML inference.</p>
+      <div class="confidence-box"><span>INFERENCE</span><b>LOCAL</b></div>
+      <button class="predict-btn" id="predictBtn" type="button">RUN PREDICTION <span>→</span></button>
+    </aside>
+  </div>
+</section>
+
+<section id="result" class="result hidden">
+  <div class="section-head"><div><span>03</span> INTELLIGENCE REPORT</div><small>Prediction + explanation</small></div>
+  <div class="result-grid">
+    <div class="result-main">
+      <div class="result-kicker" id="resultLabel"></div>
+      <div class="big-number" id="resultValue"></div>
+      <div class="risk-pill" id="riskPill"></div>
+      <div class="drivers" id="drivers"></div>
+    </div>
+    <div class="ai-card">
+      <div class="ai-head"><span class="spark">✦</span><div><b>Gemini Analyst</b><small>AI interpretation layer</small></div></div>
+      <div id="aiText" class="ai-text">Run a prediction to ask Gemini for an interpretation.</div>
+      <button id="aiBtn" class="ai-btn">✦ ASK GEMINI</button>
+    </div>
+  </div>
+  <div class="disclaimer">PredictAI is a portfolio/research application. Predictions are estimates, not guarantees. Validate important decisions with appropriate professional or domain-specific sources.</div>
+</section>
+</main>
+<footer>PredictAI • Built for local ML inference • Gemini is optional and requires your own API key</footer>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>
