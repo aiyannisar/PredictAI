@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 # 🔮 PredictAI
@@ -125,3 +126,7 @@ PredictAI includes a futuristic dashboard experience with:
                          ┌─────────────────────┐
                          │  Human Explanation  │
                          └─────────────────────┘
+=======
+# PredictAI
+Universal Prediction &amp; Risk Intelligence Platform powered by Machine Learning and Gemini AI.
+>>>>>>> e5d1c1bae8b207db24d8e5a0b74c6d73042162b9
